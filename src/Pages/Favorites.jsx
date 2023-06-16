@@ -6,7 +6,6 @@ import pantryImg1 from "../images/pantryImg1.jpg";
 import RecipeReviewCard from "../components/RecipeCard";
 
 function Favorites(props) {
-  console.log(props.uri);
   //   console.log("Favorites: " + JSON.parse(props));
   return (
     <Box className="container resultsContainer" sx={{ width: "100%" }}>

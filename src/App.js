@@ -39,7 +39,6 @@ function App() {
   }
 
   function onDelete(recipe) {
-    console.log("RECIPE URI : " + recipe.uri);
     const exist = favorites.find((fave) => fave.uri === recipe.uri);
 
     if (exist) {
@@ -47,7 +46,6 @@ function App() {
       setFavorites(favorites.filter((fave) => fave.uri !== recipe.uri));
     }
   }
-  console.log("SHOW FAVORITES: " + favorites);
 
   function getResults(recipes) {
     setRecipeResults(recipes);
