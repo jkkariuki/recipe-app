@@ -44,7 +44,7 @@ function App() {
 
     if (exist) {
       //find the cart item and delete it from the cart regardless of qty. Return all other products
-      setFavorites(favorites.filter((fave) => fave.uri != recipe.uri));
+      setFavorites(favorites.filter((fave) => fave.uri !== recipe.uri));
     }
   }
   console.log("SHOW FAVORITES: " + favorites);
