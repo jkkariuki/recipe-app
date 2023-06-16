@@ -16,7 +16,6 @@ function FullWidthTextField(props) {
 
   function handleChange(e) {
     setText(e.target.value);
-    console.log(text);
   }
 
   const searchEdamam = async (searchTerm) => {
@@ -31,7 +30,6 @@ function FullWidthTextField(props) {
           "_key=" +
           process.env.APP_KEY
       );
-      console.log(response.data.hits);
       setRecipes(response.data.hits);
       props.getResults(response.data.hits);
     } catch (e) {
