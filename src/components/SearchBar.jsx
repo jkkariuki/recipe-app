@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
-require("dotenv").config();
 import SearchIcon from "@mui/icons-material/Search";
 import { FormControl, FormLabel } from "@mui/material";
 import axios from "axios";
