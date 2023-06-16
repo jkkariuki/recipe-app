@@ -5,6 +5,7 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
+require("dotenv").config();
 
 import SearchIcon from "@mui/icons-material/Search";
 import { FormControl, FormLabel } from "@mui/material";
@@ -26,7 +27,10 @@ function FullWidthTextField(props) {
       response = await axios.get(
         "https://api.edamam.com/api/recipes/v2?type=public&q=" +
           searchTerm +
-          "&app_id=64c8aa03&app_key=56a7499859974dc9970af72fe820ce61"
+          "&app_id=" +
+          process.env.APP_ID +
+          "_key=" +
+          process.env.APP_KEY
       );
       console.log(response.data.hits);
       setRecipes(response.data.hits);
