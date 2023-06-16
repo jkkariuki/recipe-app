@@ -16,6 +16,7 @@ function FullWidthTextField(props) {
   function handleChange(e) {
     setText(e.target.value);
   }
+  console.log(process.env.APP_ID);
 
   const searchEdamam = async (searchTerm) => {
     let response;
@@ -24,10 +25,7 @@ function FullWidthTextField(props) {
       response = await axios.get(
         "https://api.edamam.com/api/recipes/v2?type=public&q=" +
           searchTerm +
-          "&app_id=" +
-          process.env.APP_ID +
-          "_key=" +
-          process.env.APP_KEY
+          "&app_id=64c8aa03_key=56a7499859974dc9970af72fe820ce61"
       );
       setRecipes(response.data.hits);
       props.getResults(response.data.hits);
