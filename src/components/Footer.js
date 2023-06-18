@@ -10,25 +10,37 @@ function Footer() {
             href="/"
             class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1"
           >
-            <RamenDiningSharpIcon />
+            <i
+              class="fa-solid fa-utensils fa-2xl"
+              style={{ color: "#e4e7ec" }}
+            ></i>{" "}
           </a>
-          <span class="mb-3 mb-md-0 text-muted">© 2023 Company, Inc</span>
+          <span class="mb-3 mb-md-0 foot">© 2023 Company, Inc</span>
         </div>
 
         <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
           <li class="ms-3">
             <a class="text-muted" href="#">
-              <i class="fa-brands fa-facebook"></i>
+              <i
+                class="fa-brands fa-facebook fa-2xl"
+                style={{ color: "#e4e7ec" }}
+              ></i>
             </a>
           </li>
           <li class="ms-3">
             <a class="text-muted" href="#">
-              <i class="fa-brands fa-instagram"></i>
+              <i
+                class="fa-brands fa-instagram fa-2xl"
+                style={{ color: "#e4e7ec" }}
+              ></i>
             </a>
           </li>
           <li class="ms-3">
             <a class="text-muted" href="#">
-              <i class="fa-brands fa-twitter"></i>
+              <i
+                class="fa-brands fa-twitter fa-2xl"
+                style={{ color: "#e4e7ec" }}
+              ></i>
             </a>
           </li>
         </ul>

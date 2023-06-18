@@ -1,3 +1,28 @@
+body{
+  background: url(/images/pantryImg1.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fs-4{
+  color: white;
+}
+
+.foot{
+  color: white;
+}
 .resultsContainer{
     margin: 0 auto;
 }
@@ -35,4 +60,14 @@
 
 .resultsContainer{
   margin-top: 40px
+}
+
+.my-5{
+background-image: url("../images/pantryImg1.jpg");
+}
+
+.inputMain{
+  display: block;
+  margin: 0 auto;
+  background-color: white;
 }

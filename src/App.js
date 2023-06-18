@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ResponsiveAppBar from "./components/AppBar";
+import Header from "./components/Banner";
+import Search from "./components/Search";
 import FullWidthTextField from "./components/SearchBar";
 import RecipeReviewCard from "./components/RecipeCard";
 import RecipeResults from "./components/RecipeResults";
@@ -53,8 +55,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <ResponsiveAppBar />
-
+        {/* <ResponsiveAppBar /> */}
+        <Header />
+        {/* <Search /> */}
         <Routes>
           <Route
             path="/"
@@ -74,8 +77,8 @@ function App() {
             element={<Favorites favorites={favorites} onDelete={onDelete} />}
           />
         </Routes>
-        <Footer />
       </div>
+      <Footer />
     </BrowserRouter>
   );
 }

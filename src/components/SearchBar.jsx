@@ -7,9 +7,11 @@ import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import { FormControl, FormLabel } from "@mui/material";
+// require("dotenv").config();
 import axios from "axios";
 
 function FullWidthTextField(props) {
+  console.log(process.env.REACT_APP_APP_ID);
   const [text, setText] = React.useState("");
   const [recipes, setRecipes] = React.useState([]);
 
@@ -25,7 +27,10 @@ function FullWidthTextField(props) {
       response = await axios.get(
         "https://api.edamam.com/api/recipes/v2?type=public&q=" +
           searchTerm +
-          "&app_id=64c8aa03_key=56a7499859974dc9970af72fe820ce61"
+          "&app_id=" +
+          process.env.REACT_APP_APP_ID +
+          "&app_key=" +
+          process.env.REACT_APP_APP_KEY
       );
       setRecipes(response.data.hits);
       props.getResults(response.data.hits);
@@ -63,6 +68,7 @@ function FullWidthTextField(props) {
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         onChange={handleChange}
+        className="inputMain"
         type="text"
         value={text}
         fullWidth
