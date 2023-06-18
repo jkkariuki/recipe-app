@@ -33,7 +33,6 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function RecipeReviewCard(props) {
-  console.log("PROPS: " + JSON.stringify(props));
   const [expanded, setExpanded] = React.useState(false);
   const [favorited, setFavorited] = React.useState(false);
   const [location, setLocation] = React.useState(window.location.pathname);

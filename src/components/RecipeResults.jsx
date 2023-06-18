@@ -28,9 +28,9 @@ function RecipeResults(props) {
           <Grid item xs={12}>
             <article className="article">
               {/* <picture className="pantryImg"> */}
-              <img className="pantryImg" src={pantryImg1} alt="background" />
+              {/* <img className="pantryImg" src={pantryImg1} alt="background" /> */}
               {/* </picture> */}
-              <h1 className="textOverImg">Thoughts on Dinner?</h1>
+              <input className="inputMain" />
             </article>
           </Grid>
         )}
