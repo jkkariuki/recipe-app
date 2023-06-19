@@ -7,11 +7,11 @@ import RecipeReviewCard from "./RecipeCard";
 
 function RecipeResults(props) {
   return (
-    <Box className="container resultsContainer" sx={{ width: "100%" }}>
+    <Box className="resultsContainer" sx={{ width: "100%" }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         {props.results.length > 0 ? (
           props.results.map((result) => (
-            <Grid item xs={4}>
+            <Grid style={{ alignItems: "center" }} item xs={12} md={6} lg={4}>
               <RecipeReviewCard
                 uri={result.recipe.uri.substr(50, 63)}
                 recipeName={result.recipe.label}
@@ -25,7 +25,10 @@ function RecipeResults(props) {
             </Grid>
           ))
         ) : (
-          <h1></h1>
+          <h2 style={{ margin: "0px 5%", textAlign: "center", color: "white" }}>
+            Lookup and save recipes for your favorite dishes or find recipes
+            that work with the ingredients you already have!
+          </h2>
         )}
       </Grid>
     </Box>

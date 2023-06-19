@@ -6,6 +6,8 @@ import Paper from "@mui/material/Paper";
 import InputBase from "@mui/material/InputBase";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
+import Grid from "@mui/material/Unstable_Grid2";
+
 import { FormControl, FormLabel } from "@mui/material";
 // require("dotenv").config();
 import axios from "axios";
@@ -43,36 +45,40 @@ function FullWidthTextField(props) {
   }
 
   return (
-    <Paper
-      component="form"
-      sx={{
-        p: "2px 4px",
-        display: "flex",
-        alignItems: "center",
-        width: 500,
-        mx: "auto",
-        my: "40px",
-      }}
-    >
-      <InputBase
-        sx={{ ml: 1, flex: 1 }}
-        onChange={handleChange}
-        className="inputMain"
-        type="text"
-        value={text}
-        fullWidth
-        placeholder="Search Recipes or Ingredients"
-        inputProps={{ "aria-label": "search google maps" }}
-      />
-      <IconButton
-        onClick={handleSubmit}
-        type="button"
-        sx={{ p: "10px" }}
-        aria-label="search"
-      >
-        <SearchIcon />
-      </IconButton>
-    </Paper>
+    <Grid container>
+      <Grid fontStyle={{ marginTop: "5%" }} item xs={12}>
+        <Paper
+          component="form"
+          sx={{
+            p: "2px 4px",
+            display: "flex",
+            alignItems: "center",
+            width: 450,
+            mx: "auto",
+            my: "40px",
+          }}
+        >
+          <InputBase
+            sx={{ ml: 1, flex: 1 }}
+            onChange={handleChange}
+            className="inputMain"
+            type="text"
+            value={text}
+            fullWidth
+            placeholder="Search Recipes or Ingredients"
+            inputProps={{ "aria-label": "search google maps" }}
+          />
+          <IconButton
+            onClick={handleSubmit}
+            type="button"
+            sx={{ p: "10px" }}
+            aria-label="search"
+          >
+            <SearchIcon />
+          </IconButton>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 }
 
