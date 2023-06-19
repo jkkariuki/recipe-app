@@ -11,7 +11,7 @@ Lookup recipes by name or by ingredients
 
 Users can save recipes as "favorite" as well as delete favorites.
 
-👉 Live Demo: (https://https://jk-recipe-app-1096155fe241.herokuapp.com//)
+👉 Live Demo: (https://jk-recipe-app-1096155fe241.herokuapp.com)
 
 Screenshots of the Project 📸
 
