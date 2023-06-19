@@ -11,14 +11,12 @@ import { FormControl, FormLabel } from "@mui/material";
 import axios from "axios";
 
 function FullWidthTextField(props) {
-  console.log(process.env.REACT_APP_APP_ID);
   const [text, setText] = React.useState("");
   const [recipes, setRecipes] = React.useState([]);
 
   function handleChange(e) {
     setText(e.target.value);
   }
-  console.log(process.env.APP_ID);
 
   const searchEdamam = async (searchTerm) => {
     let response;
