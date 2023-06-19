@@ -22,8 +22,8 @@ function Favorites(props) {
       )}
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         {props.favorites.length > 0 ? (
-          <Grid item xs={4}>
-            {props.favorites.map((favorite) => (
+          props.favorites.map((favorite) => (
+            <Grid item xs={4}>
               <RecipeReviewCard
                 uri={favorite.uri}
                 recipeName={favorite.recipeName}
@@ -34,8 +34,8 @@ function Favorites(props) {
                 onAdd={props.onAdd}
                 onDelete={props.onDelete}
               />
-            ))}{" "}
-          </Grid>
+            </Grid>
+          ))
         ) : (
           <h1></h1>
         )}

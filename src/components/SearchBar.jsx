@@ -56,15 +56,6 @@ function FullWidthTextField(props) {
         my: "40px",
       }}
     >
-      {/* <FormControl> */}
-      {/* <TextField
-          type="text"
-          value={text}
-          onChange={handleChange}
-          fullWidth
-          label="Search Recipes or Ingredients"
-          id="fullWidth"
-        /> */}
       <InputBase
         sx={{ ml: 1, flex: 1 }}
         onChange={handleChange}
@@ -83,7 +74,6 @@ function FullWidthTextField(props) {
       >
         <SearchIcon />
       </IconButton>
-      {/* </FormControl> */}
     </Paper>
   );
 }
