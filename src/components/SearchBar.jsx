@@ -53,7 +53,7 @@ function FullWidthTextField(props) {
             p: "2px 4px",
             display: "flex",
             alignItems: "center",
-            width: 450,
+            width: 350,
             mx: "auto",
             my: "40px",
           }}
