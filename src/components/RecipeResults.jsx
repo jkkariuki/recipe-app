@@ -25,14 +25,7 @@ function RecipeResults(props) {
             </Grid>
           ))
         ) : (
-          <Grid item xs={12}>
-            <article className="article">
-              {/* <picture className="pantryImg"> */}
-              {/* <img className="pantryImg" src={pantryImg1} alt="background" /> */}
-              {/* </picture> */}
-              <input className="inputMain" />
-            </article>
-          </Grid>
+          <h1></h1>
         )}
       </Grid>
     </Box>
