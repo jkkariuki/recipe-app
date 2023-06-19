@@ -10,14 +10,20 @@ function Favorites(props) {
   return (
     <Box className="container resultsContainer" sx={{ width: "100%" }}>
       {props.favorites.length > 0 ? (
-        <h1>My Recipes</h1>
+        <div className="myRecipesHeading">
+          {" "}
+          <h1>My Recipes</h1>
+        </div>
       ) : (
-        <h1>You haven't saved any recipes yet!</h1>
+        <div className="favoritesHeading">
+          {" "}
+          <h1>You haven't saved any recipes yet!</h1>
+        </div>
       )}
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
         {props.favorites.length > 0 ? (
-          props.favorites.map((favorite) => (
-            <Grid item xs={4}>
+          <Grid item xs={4}>
+            {props.favorites.map((favorite) => (
               <RecipeReviewCard
                 uri={favorite.uri}
                 recipeName={favorite.recipeName}
@@ -28,18 +34,11 @@ function Favorites(props) {
                 onAdd={props.onAdd}
                 onDelete={props.onDelete}
               />
-            </Grid>
-          ))
-        ) : (
-          <Grid item xs={12}>
-            <article className="article">
-              {/* <picture className="pantryImg"> */}
-              <img className="pantryImg" src={pantryImg1} alt="background" />
-              {/* </picture> */}
-              <h1 className="textOverImg">Thoughts on Dinner?</h1>
-            </article>
+            ))}{" "}
           </Grid>
-        )}{" "}
+        ) : (
+          <h1></h1>
+        )}
       </Grid>
     </Box>
   );

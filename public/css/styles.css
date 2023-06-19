@@ -71,3 +71,16 @@ background-image: url("../images/pantryImg1.jpg");
   margin: 0 auto;
   background-color: white;
 }
+
+.myRecipesHeading{
+  color:white;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+.favoritesHeading{
+  color:white;
+  margin: 0 auto;
+  text-align: center;
+}
